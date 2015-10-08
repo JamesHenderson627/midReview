@@ -41,8 +41,8 @@ var isNegative = function(n){
 
 var iPutTheFunIn = function(inputString) {
     var newString = inputString,
-        halfString = newString.length / 2
-    return newString.substr(0, halfString) + "fun" + newString.substr(halfString)
+        halfPoint = newString.length / 2
+    return newString.substr(0, halfPoint) + "fun" + newString.substr(halfPoint)
 }
 
 // 4. write a function called incrementEach(). it should take as input an array of numbers and increase the value of each number by one. try it with a basic for loop, then try it the appropriate functional method (map/filter/reduce/forEach).
@@ -55,26 +55,20 @@ var incrementEach = function(arr){
 }
 
 var incrementEach = function(arr){
-    var newArr = arr,
-        result = []
-    newArr.map(function(index){
-        result.push(index + 1)
+    return arr.map(function(index){
+        return index + 1
     })
-    return result
 }
 
 
 // 5. write a function called shortiesOnly(). taking as input an array of strings, it should use the array's .filter() method to return a new array containing only those strings with fewer than four characters. 
 
 var shortiesOnly = function(arr) {
-    var newArr = arr,
-        result = []
-    newArr.filter(function(index) {
+    return arr.filter(function(index) {
         if (index.length < 4) {
-            result.push(index)
+            return true
         }
     })
-    return result
 }
 
 // test for #1
