@@ -65,9 +65,7 @@ var incrementEach = function(arr){
 
 var shortiesOnly = function(arr) {
     return arr.filter(function(index) {
-        if (index.length < 4) {
-            return true
-        }
+        return index.length < 4
     })
 }
 
